@@ -2,10 +2,19 @@
 <html lang="en">
     <head>
         <title>Class Exercise 02a</title>
-        <style></style>
+        <style>   
+            #bottomSpace {
+                margin-top: 1000px;
+            }
+
+        </style>
+
         <link>
-        <script></script>
+
+        <script>
+        </script>
     </head>
+
 
     <body>
         <!--  Headings  -->
@@ -21,27 +30,27 @@
         <hr>
         <br>
 
-        <!--  Paragraphs  -->
+        <!--  Paragraph  -->
 
-        <p>Lorem ipsum <strong>dolor sit amet consectetur</strong> adipisicing elit. Tempora non velit at rem obcaecati quo iusto. <em>Facere laboriosam</em> nemo numquam est qui, alias neque voluptatem eveniet ipsa eos reiciendis officiis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste omnis fuga nam quisquam consectetur. <strong>Dolorem consequatur</strong> architecto, molestiae sunt nulla quo saepe doloremque recusandae tenetur. <em> cupiditate rerum ut quae!</em></p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="https://3Dtotal.com" target="_blank">Tempora non velit</a> at rem obcaecati quo iusto. Facere laboriosam nemo numquam est qui, alias neque voluptatem eveniet ipsa eos reiciendis officiis.</p>
-
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste omnis fuga nam quisquam consectetur. Dolorem consequatur architecto, molestiae sunt nulla quo saepe <a href="http://3Dtotal.com" target="_blank">doloremque recusandae tenetur</a>. Adipisci cupiditate rerum ut quae!</p>
+       
         <br>
         <hr>
         <br>
 
         <!--  Lists  -->
 
-        <ul> <!-- un-ordered lists-->
-            <li>Item 1</li>
+        <ul>
+            <em><li><a href="#">Item 1</a></li></em>
             <li>Item 2</li>
             <li>Item 3</li>
             <li>Item 4</li>
         </ul>
 
-        <ol> <!-- ordered lists-->
-            <li>Item 1</li>
+        <ol>
+            <em><li><a href="#">Item 1</a></li></em>
             <li>Item 2</li>
             <li>Item 3</li>
             <li>Item 4</li>
@@ -55,27 +64,28 @@
 
         <table>
             <thead>
-                <tr>
-                    <th>Student ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                <tr>                    
+                    <th>Name</th>
                     <th>Email</th>
+                    <th>Age</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>stu1</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>jdoe@somewhere.com</td>
+                   <td>Some Body</td> 
+                   <td>somebody@someaddres.com</td>
+                   <td>80</td>
                 </tr>
                 <tr>
-                    <td>stu2</td>
-                    <td>Any</td>
-                    <td>Body</td>
-                    <td>abody@somewhere.com</td>
+                   <td>Any Body</td> 
+                   <td>anybody@someaddres.com</td>
+                   <td>93</td>
                 </tr>
-                
+                <tr>
+                   <td>Every Body</td> 
+                   <td>everybody@someaddres.com</td>
+                   <td>75</td>
+                </tr>
             </tbody>
         </table>
 
@@ -83,7 +93,57 @@
         <hr>
         <br>
 
+        <!--  Forms  -->
+       
+        <form action="dummyPage.php" method="POST">
+            <div>
+                <label>First Name:</label>
+                <input type="text" name="firstName" placeholder="Enter First Name.">
+            </div> 
+            <div>
+                <label>Last Name:</label>
+                <input type="text" name="lastName" placeholder="Enter Last Name.">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label>Message:</label>
+                <textarea name="message"></textarea>
+            </div>
+            <div>
+                <label>Gender:</label>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div>
+                <label>Age:</label>
+                <input type="number" name="age">
+            </div>
+            <div>
+                <label>Birthday:</label>
+                <input type="date" name="birthday">
+            </div>
+            <br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
 
-    <div style="margin-top: 1000px;"></div>
+        <br>
+        <hr>
+        <br>
+
+        <!--  Images  -->
+
+        <a href="https://www.google.com/search?q=chess+piece+images&rlz=1C5CHFA_enUS895US897&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiJu6zryf_oAhXTMX0KHYDtCggQ_AUoAXoECBIQAw&biw=1355&bih=897">
+            
+            <img src="Chess.jpg" alt="3D chess pieces">
+        
+        </a>
+        <!-- you don't need to do this part -->
+        <div id="bottomSpace"></div>
+
     </body>
 </html>
