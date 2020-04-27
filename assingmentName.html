@@ -9,30 +9,22 @@
 			}
 			header, nav, footer {
 				text-align: center;
+				padding: 0;
 			}
-			main {
-				margin: 0px auto;
+			section {
+				margin: 0px 0px auto;
 				height: 260px;
+				background-color: rgb(231, 226, 226);
+				overflow:hidden;
 			}
 			nav,footer { 
 				background-color: black;
 				color: white;
 			}
-			section{
-				background-color: rgb(100, 97, 97);
+			section.left {
+				background-color: rgb(150, 147, 147);
 				float: left;
 				width: 200px;
-				height: 276px;
-				vertical-align: middle;
-			}
-			aside {
-				background-color: rgb(207, 204, 204);
-				float: left;
-				width: 752px;
-				height: 276px;
-			}
-			footer{
-
 			}
 
 		</style>
@@ -40,7 +32,7 @@
 	
 	<body>
 		<div>
-		<!-- Banner End -->
+		<!-- Header Start -->
 		<header>
 			<h1>ITC 111 Assignments Portal Page</h1>
 
@@ -53,11 +45,11 @@
 			<!-- Nav Start -->
 
 		</header>
-		<!-- Banner End -->
+		<!-- Header End -->
 
-		<main>
+		<section>
 			<!--Link Section Start -->
-			<section>
+			<section class="left">
 				<ul>
 					<li>
 						<a href="#" title="Assignment 01 Link">A01</a>
@@ -94,12 +86,12 @@
 			<!-- link section Start -->
 
 			<!-- Side Bar Start -->
-			<aside>
+			<section>
 				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda modi adipisci repellat fuga animi illo molestias maiores voluptatem quo doloribus, necessitatibus quaerat neque provident unde aliquam suscipit obcaecati quasi nulla!</p>
-			</aside>
+			</section>
 			<!-- Side BarStart -->
 
-		</main>
+		</section>
 		<footer>
 			<p>Copyright &copy; ITC-111</p>
 		</footer>
