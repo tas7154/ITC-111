@@ -13,7 +13,7 @@
         </header>
 
         <section>
-            <form action="formphp.php" method="POST">
+            <form onsubmit="alert(userName.value);return false">
                 <div id="formData">
                     <div class="label">
                         <label>Username</label>
@@ -25,11 +25,16 @@
                     <input type="password" name="password">
                     <br>
                     <br>
+                    <input type="submit" name="submit">
+                    <br>
+                    <br>
                     <a href="#">Forgot username</a>&nbsp;&nbsp;
                     <a href="#">Forgot password</a>
                 </div>
             </form>
         </section>
-    </div>    
+    </div>  
+
 </body>
 </html>
+
