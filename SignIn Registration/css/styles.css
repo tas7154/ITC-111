@@ -18,14 +18,12 @@
     color: #1d1c1c;
     padding: 10px;
 }
-#formData2 {
-    text-align: center;
-    color: #1d1c1c;
-    padding: 10px;
-}
-.label {
+.registrationLabel {
     text-align: left;
     margin-left: 21px;
+}
+.signInLabel {
+    text-align: center;
 }
 #age {
     width: 30px;
