@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Class Exercise 5a</title>
@@ -40,17 +40,25 @@
         }
     </style>
     <script>
-        var newContent = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, placeat unde quas voluptatum numquam temporibus dicta neque earum, accusamus autem omnis aut fuga animi ut perspiciatis minus possimus quia sed!';
+        var link1Content = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, placeat unde quas voluptatum numquam temporibus dicta neque earum, accusamus autem omnis aut fuga animi ut perspiciatis minus possimus quia sed!';
+        var link2Content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque modi, aliquid repudiandae ea facere mollitia libero expedita dignissimos quos totam, iste deleniti doloremque similique ut dolore error debitis pariatur distinctio!\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iure quibusdam animi asperiores et, aut laborum praesentium cupiditate minus corporis. Cupiditate dolores soluta, voluptatum aliquid quisquam repellat consectetur a magnam.';
+
         function changeColor(){
             //alert('reached');
             document.getElementById('divRight').style.color = 'red';
         }
         function changeLinkText(){
            // alert('reached');
-            document.getElementById('divLeft').innerHTML = 'New Link';
+            document.getElementById('divLeft').innerHTML = '<a href="#" onclick="changeDivRightText("left")">New Link 1</a>\n<a href="#" onclick="changeDivRightText("right")">New Link 2</a>';
         }
-        function changeDivRightText(){
-            document.getElementById('divRight').innerHTML = newContent;
+        function changeDivRightText(txt){
+            if(txt == 'left') {
+                document.getElementById('divRight').innerHTML = link1Content;
+            } else if (txt == 'right') {
+                document.getElementById('divRight').innerHTML = link2Content;
+            } else {
+                document.getElementById('divRight').innerHTML = 'Some new Content';
+            }
         }
     </script>
 
