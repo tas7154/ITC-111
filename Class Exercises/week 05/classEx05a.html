@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class Exercise 5a</title>
+    <style>
+        ul {
+            background-color: #333333;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li, a {
+            display: block;
+            color: white;
+            padding: 16px;
+        }
+        li a:hover{
+            background-color: #111111;
+        }
+        li {
+            float: left;
+        }
+        #outerDiv {
+            margin: 0 auto;
+            width: 75%;
+            overflow: hidden;
+        }
+        #innerDivBodyLeft, #innerDivBodyRight{
+            float:left;
+            height: 500px;
+        }
+        #innerDivBodyLeft{
+            background-color: cadetblue;
+            width: 20%;
+        }
+        #innerDivBodyRight{
+            background-color: blue;
+            width: 80%;
+        }
+    </style>
+    <script>
+        var newContent = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, placeat unde quas voluptatum numquam temporibus dicta neque earum, accusamus autem omnis aut fuga animi ut perspiciatis minus possimus quia sed!';
+        function changeColor(){
+            //alert('reached');
+            document.getElementById('divRight').style.color = 'red';
+        }
+        function changeLinkText(){
+           // alert('reached');
+            document.getElementById('divLeft').innerHTML = 'New Link';
+        }
+        function changeDivRightText(){
+            document.getElementById('divRight').innerHTML = newContent;
+        }
+    </script>
+
+</head>
+<body>
+    <div id='outerDiv'>
+        <div>
+            <ul>
+                <li>
+                    <a href="#" onclick='changeLinkText()'>Text</a>
+                </li>
+                <li>
+                    <a href="#" onclick='changeColor()'>Color</a>
+                </li>
+            </ul>
+        </div>
+        <div id='innerDivBodyLeft'>
+            <a href='#' id='divLeft' onclick='changeDivRightText()'>Some Link</a>
+        </div>
+        <div id='innerDivBodyRight'>
+            <p id='divRight'>Content goes here when link is clicked</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
