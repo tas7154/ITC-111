@@ -76,19 +76,28 @@
             The function creates 2 links and places them into the teal colored div.
             The text in the blue div is also changed.
         */
-        function changeLinkText(){
+        function changeLinkText(lnk){
+            var link = lnk;
+            link.trim();
+            // var divTrg = document
+            // var link = document.createElement('a');
+            // link.href = "#";
+            // link.onclick = changeDivRightText(lnk);
+            // link.innerHTML = "Link1a";
+            // divLeft.app
             // this statement calls the document.getElementById() method to add some html into
             // some other html. The document.getElementById() method call is used to target an
             // within a document based on its id. The div with the id of 'divLeft' has these new
             // links placed in it's innerHTML. After being created 'onclick' each link also calls
             // a function when their 'onclick' event attribute is triggered attribute 
-            document.getElementById('divLeft').innerHTML = '<a href="#" onclick="changeDivRightText("link1")">Link 1a</a><br><a href="#" onclick="changeDivRightText("link2")">Link 1b</a>';
+            document.getElementById('divLeft').innerHTML = "<a href='#' onclick='changeDivRightText("+'\"link1\"'+")'>Link 1a</a>"
+            "<br>"+
+            "<a href='#' onclick='changeDivRightText("+'\"link2\"'+")'>Link 1b</a>";
             // The innerHTML of the div to the right is also changed
             document.getElementById('divRight').innerHTML = 'Content for the "Link 1" link.';
             // Any of an elements properties can be changed this way. Here the color is changed.
-            document.getElementById('divRight').style.color = 'red';
+            document.getElementById('divRight').style.color = 'red';            
         }
-
         /*
             This function changed the text displayed by an element/tag. It takes a parameter 'txt'
             that is used to control what text to display depending on which link is clicked. This 
@@ -96,7 +105,7 @@
         */
         function changeDivRightText(txt){
             // the 'if' condition sets the text to display if Link 1a is clicked 
-            if(txt == 'link1') {
+            if(txt == "link1") {
                 document.getElementById('divRight').innerHTML = 'Content from Link 1a';
             // the 'else if' condition sets the text to display if Link 1b is clicked 
             } else if (txt == 'link2') {
@@ -107,7 +116,6 @@
             }
         }            
     </script>
-
 </head>
 <body>
     <!-- 
@@ -139,7 +147,7 @@
                         'onclick' is an event attribute. All tags can use the onclick 
                         attriute.
                     -->
-                    <a href="#" onclick='changeLinkText()'>Class Exercises</a>
+                    <a href="#" onclick="changeLinkText('test')">Class Exercises</a>
                 </li>
                 <li>
                     <a href="#" onclick='changeColor()'>Assignments</a>
@@ -161,10 +169,8 @@
             to the left. Div's would normaly stack as they are block elements.
          -->
         <div id='innerDivBodyRight'>
-            <p id='divRight'>Content loaded in div on page load by default.</p>
+            <a href="#" id='divRight'>Content loaded in div on page load by default.</a>
         </div>
-    </div>
-
-    
+    </div>    
 </body>
 </html>
