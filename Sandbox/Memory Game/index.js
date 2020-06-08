@@ -4,7 +4,6 @@ let combosFound = 0;
 
 function onCardClicked(e){
     const target = e.currentTarget;
-
     if (
         preventClick ||
         target === clickedCard || 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="users">
+        <script>
+            let request = new XMLHttpRequest();
+            request.open('GET','users.json', true);
+            request.onload = function () {
+                let users = JSON.parse(this.response);
+                let output = '';
+                for(var i = 0; i < users.length; i++) {
+                    output += '<li>' + users[i].name + ' is ' + users[i].age + ' years old.'; '</li>'
+                    //document.write(users[i].name);
+                }
+                document.getElementById('users').innerHTML = output;            }
+            request.send();
+        </script>
+    </ul>
+    
+</body>
+</html>
