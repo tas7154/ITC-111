@@ -1,4 +1,5 @@
 var val1, val2;
+var vals= [];
 function loadDisplay(num) {
     document.getElementById('display2').value += num.value.toString();
 }
@@ -12,6 +13,9 @@ function setOperator(tag) {
     val1 = document.getElementById('display2').value + " " + tag.value;
     document.getElementById('display1').innerHTML = val1;
     document.getElementById('display2').value = "";
+    
+    vals.push(va1)
+
 }
 function doMath() {
     val2 = document.getElementById('display2').value;
