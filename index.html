@@ -1,118 +1,93 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>ITC 111 Assignments Portal Page</title>	
-		<style>
-			div {
-				margin: 0px auto;
-				width: 50%;
-			}
-			p {
-				margin: 0px;
-			}
-			.center {
-				margin-top:10%;
-				border: lawngreen 1px solid;
-				height:50px;
-				text-align: center;
-			}
-			header, nav, footer {
-				text-align: center;
-			}
-			main {
-				margin: auto;
-				height: 260px;
-				background-color: rgb(231, 226, 226);
-				overflow:hidden;
-			}
-			nav, footer { 
-				background-color: black;
-				color: white;
-			}
-			section.left {
-				text-align: center;
-				height: 260px;
-				background-color: rgb(150, 147, 147);
-				float: left;
-				width: 200px;
-			}
-			ul {
-				margin-left: -40px;
-				list-style-type: none;
-			}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ITC-111 Web Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!--
+        This div tag with the id 'outerDiv' is used to contain
+        the rest of the page. I can use this div to control the
+        overall placing of the elements on the page.
+    -->
+    <div id='outerDiv'>
 
-		</style>
-	</head>
-	
-	<body>
-		<div>
-			<!-- Header Start -->
-			<header>
-				<!-- Banner Start -->
-				<h1>ITC 111 Assignments Portal Page</h1>
-				<!-- Banner End -->
-				<!-- Nav Bar Start -->
-					<nav>
-						<a href="#" title="Class Assignments">Home</a> &nbsp;|&nbsp;
-						<a href="#" title="Class Assignments">Class Exercises</a> &nbsp;|&nbsp;
-						<a href="#" title="Home Assignments">Assignments</a> &nbsp;|&nbsp;
-						<a href="#" title="Resourses">Resources</a> 
-					</nav>
-				<!-- Nav Start -->
-			</header>
-			<!-- Header End -->
-			<main>
-				<!--Link Section Start -->
-				<section class="left"><br>
-					<p>Links</p>
-					<hr>
-					<ul>
-						<li>
-							<a href="#" title="Assignment 01 Link">A01</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 02 Link">A02</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 03 Link">A03</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 04 Link">A04</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 05 Link">A05</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 06 Link">A06</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 07 Link">A07</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 08 Link">A08</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 09 Link">A09</a>
-						</li>
-						<li>
-							<a href="#" title="Assignment 10 Link">A10</a>
-						</li>
-					</ul>
-				</section>
-				<!-- link section Start -->
+        <!-- Start of Nav Bar Section -->
+        <!--
+            This div could easly have been a section or aside tag
+            as it is being used to layout other elements of the page.
+        -->
+        <div>
+            <!--
+                Here we have an un-ordered list to group our links
+                as indivitual line items horizontally.
+            -->
+            <ul>
+                <li>
+                    <!--
+                        This link is calling a function that is in our script tag.
+                        'onclick' is an event attribute. All tags can use the onclick
+                        attriute.
+                    -->
+                    <a href="#" onclick='changeLinkText("home")'>Home</a>
+                </li>
+                <li>
+                    <a href="#" onclick='changeLinkText("classEx")'>Class Exercises</a>
+                </li>
+                <li>
+                    <a href="#" onclick='changeLinkText("assign")'>Assignments</a>
+                </li>
+                <li>
+                    <a href="#" onclick='changeLinkText("resource")'>Resources</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End of Nav Bar Section -->
+        
+        <!-- Start of Side Bar Section -->
 
-				<!-- Side Bar Start -->
-				<section class="center">
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda modi adipisci repellat fuga animi illo molestias maiores voluptatem quo doloribus, necessitatibus quaerat neque provident unde aliquam suscipit obcaecati quasi nulla!</p>
-				</section>
-				<!-- Side BarStart -->
+        <!--
+            This div could easly have been a section or aside tag
+            as it is being used to layout other elements of the page.
+        -->
+        <div id='innerDivBodyLeft_Default'>
+            <h4 id="ls_Heading">ITC-111</h4>
+            <hr>
+            <!-- Seen when page loads or when Home is clicke. Visibility on by default  -->
+            <div id="divLeft_Default">
+                <a href='#' class='divLeftLinks' onclick='changeDivRightText("Course Overview")'>Course Overview</a><br>
+                <a href='#' class='divLeftLinks' onclick='changeDivRightText("Goals & Objectives")'>Goals & Objectives</a><br>
+                <a href='#' class='divLeftLinks' onclick='changeDivRightText("History")'>History</a>
+            </div>
+            <!-- Seen when Class Exercise Link is clicked. -->
+            <div id="divLeft_CELinks">
+                <a href='../../../ITC-111/Class Exercises/week 08/calculator/calculator.html' target="blank" class='divLeftLinks' onclick='changeDivRightText("Class Ex 01")'>Class Ex - Calculator</a><br>
+                <a href='#' class='divLeftLinks' onclick='changeDivRightText("Class Ex 02")'>Class Exercise 02</a><br>
+            </div>
+            <!-- Seen when Assignments Link is clicked. -->
+            <div id="divLeft_ALinks">
+                <a href='#' class='divLeftLinks' onclick='changeDivRightText("Assignment 01")'>Assignment 01</a><br>
+                <a href='#' class='divLeftLinks' onclick='changeDivRightText("Assignment 02")'>Assignment 02</a><br>
+            </div>
+            <!-- Seen when Resources Link is clicked. -->
+            <div id="divLeft_RLinks">
+                <a href='#' class='divLeftLinks' onclick='changeDivRightText("Resources 01")'>Resource 01</a><br>
+                <a href='#' class='divLeftLinks' onclick='changeDivRightText("Resources 02")'>Resource 02</a><br>
+            </div>
+        </div>
+        <!-- End of Side Bar Section -->
 
-			</main>
 
-			<footer>
-				<p>Copyright &copy; ITC-111</p>
-			</footer>
-
-		</div>	
-	</body>
+        <!--
+            This div is lined up right next to the previous one. CSS is used to align it
+            to the left. Div's would normaly stack as they are block elements.
+        -->
+        <div id='innerDivBodyRight'>
+            <h2 id="rs_Heading">Intro to Programming <br>w/HTML, CSS & JavaScript</h2>
+            <p id='divRight'>Content loaded in div on page load by default.</p>
+        </div>
+    </div>
+</body>
 </html>
