@@ -35,7 +35,7 @@ function init(){
     // set display
     word.innerHTML = crrWrd;
     // set ndx
-    ndx = crrLst.indexOf(crrWrd)
+    ndx = crrLst.indexOf(crrWrd);
     // reset category list to default
     document.getElementById("category").selectedIndex = 0;
     // reset target list values to default
@@ -126,7 +126,7 @@ function swapTargets(){
     crrLst = trgLst;
     trgLst = tmpLst;
 
-    crrWrd = crrLst(ndx);
+    crrWrd = crrLst[ndx];
 
     word.innerHTML = crrWrd;
 
